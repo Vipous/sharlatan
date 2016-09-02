@@ -4,6 +4,6 @@
     <input type="number" [(ngModel)]="memberSize">
     <button (click)="onPlay(memberSize)">Играть</button>
     <ul>
-        <li *ngFor="#result of results">Ты выиграл после <b>{{result}}</b> попыток</li>
+        <li *ngFor="let result of results">Ты выиграл после <b>{{result}}</b> попыток</li>
     </ul>
 </div>
