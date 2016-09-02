@@ -3,6 +3,7 @@
     <label>Сколько участников:</label>
     <input type="number" [(ngModel)]="memberSize">
     <button (click)="onPlay(memberSize)">Играть</button>
+    <button (click)="onClean()">Очистить</button>
     <ul>
         <li *ngFor="let result of results">Ты выиграл после <b>{{result}}</b> попыток</li>
     </ul>

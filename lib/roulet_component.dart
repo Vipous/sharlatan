@@ -9,12 +9,16 @@ import 'package:sharlatan/roulet.dart';
 class RouletComponent{
   int playCount=0;
   int memberSize=400;
-  var results = new List();
+  List results = new List();
 
   onPlay(int memberSize){
     var roulet = new Roulet(memberSize.toInt());
     roulet.playToWin();
     results.add(roulet.playCount);
+  }
+
+  onClean(){
+    results.clear();
   }
 
 }
