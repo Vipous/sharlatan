@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:html';
 
 class Roulet{
   final int membersSize;
@@ -7,13 +8,16 @@ class Roulet{
   int player;
   int playCount = 0;
 
-  Roulet(this.membersSize);
+  Roulet(this.membersSize){
+    init();
+  }
 
   randomIndex()=>random.nextInt(members.length);
 
   init(){
     members = new List.generate(membersSize, (index)=>index);
     player = randomIndex();
+    window.console.debug("Members: ${members.length}, you: ${player}");
   }
 
   draw(){

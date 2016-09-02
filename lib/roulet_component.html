@@ -1,0 +1,9 @@
+<div>
+    <h2>Лотерея - Шанс выигарть 1/{{memberSize.toInt()}}</h2>
+    <label>Сколько участников:</label>
+    <input type="number" [(ngModel)]="memberSize">
+    <button (click)="onPlay(memberSize)">Играть</button>
+    <ul>
+        <li *ngFor="#result of results">Ты выиграл после <b>{{result}}</b> попыток</li>
+    </ul>
+</div>
